@@ -263,9 +263,68 @@ if (serviceDescToggle && serviceDescContent) {
 const bookingForm = document.getElementById('bookingForm');
 const successModal = document.getElementById('successModal');
 
+// ===== МАСКА ТЕЛЕФОНА =====
+const phoneInput = document.getElementById('phoneInput');
+if (phoneInput) {
+    phoneInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.startsWith('8')) {
+            value = '7' + value.slice(1);
+        }
+        if (value.length > 0 && !value.startsWith('7')) {
+            value = '7' + value;
+        }
+        value = value.slice(0, 11);
+
+        let formatted = '+7';
+        if (value.length > 1) {
+            formatted += ' (' + value.slice(1, 4);
+        }
+        if (value.length >= 4) {
+            formatted += ') ' + value.slice(4, 7);
+        }
+        if (value.length >= 7) {
+            formatted += '-' + value.slice(7, 9);
+        }
+        if (value.length >= 9) {
+            formatted += '-' + value.slice(9, 11);
+        }
+
+        e.target.value = formatted;
+    });
+
+    phoneInput.addEventListener('focus', () => {
+        if (!phoneInput.value) {
+            phoneInput.value = '+7';
+        }
+    });
+}
+
+// ===== TELEGRAM AUTO @ =====
+const telegramInput = document.getElementById('telegramInput');
+if (telegramInput) {
+    telegramInput.addEventListener('blur', () => {
+        let value = telegramInput.value.trim();
+        if (value && !value.startsWith('@')) {
+            telegramInput.value = '@' + value;
+        }
+    });
+}
+
+// ===== ВАЛИДАЦИЯ И ОТПРАВКА ФОРМЫ =====
 if (bookingForm) {
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
+
+        if (phoneInput) {
+            const phoneRaw = phoneInput.value.replace(/\D/g, '');
+            if (!/^7\d{10}$/.test(phoneRaw)) {
+                alert('Введите корректный номер телефона: +7 и 10 цифр');
+                phoneInput.focus();
+                return;
+            }
+        }
+
         if (successModal) successModal.classList.add('active');
         bookingForm.reset();
     });
