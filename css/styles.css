@@ -689,6 +689,14 @@ section {
     inset: 0;
     width: 100%;
     height: 100%;
+    font-size: 0;
+    line-height: 0;
+}
+.ba-image-before {
+    background: linear-gradient(135deg, var(--nude-beige), var(--soft-cappuccino));
+}
+.ba-image-after {
+    background: linear-gradient(135deg, var(--dusty-rose), var(--light-blush));
 }
 .ba-image img {
     width: 100%;
