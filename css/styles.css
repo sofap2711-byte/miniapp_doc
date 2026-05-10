@@ -1,0 +1,291 @@
+
+
+/* ===== УСЛУГИ — АККОРДЕОН ===== */
+
+.services-accordion {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.service-category {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,246,243,0.9) 100%);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-category:hover {
+    border-color: rgba(200,169,126,0.4);
+    box-shadow: 0 4px 20px rgba(59,46,42,0.06);
+}
+
+.service-category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+}
+
+.service-category-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.service-category-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--deep-brown);
+    margin: 0;
+}
+
+.service-category-count {
+    font-size: 0.75rem;
+    color: var(--soft-cappuccino);
+    opacity: 0.7;
+}
+
+.service-category-arrow {
+    width: 20px;
+    height: 20px;
+    color: var(--soft-cappuccino);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* ===== МОДАЛЬНОЕ ОКНО УСЛУГИ ===== */
+
+.service-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.service-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.service-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(59,46,42,0.4);
+    backdrop-filter: blur(4px);
+}
+
+.service-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    background: var(--warm-white);
+    border-radius: 32px 32px 0 0;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-modal.active .service-modal-content {
+    transform: translateY(0);
+}
+
+.service-modal-header {
+    position: sticky;
+    top: 0;
+    background: var(--warm-white);
+    padding: 20px 24px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 10;
+}
+
+.service-modal-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--light-blush);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--deep-brown);
+    flex-shrink: 0;
+}
+
+.service-modal-close svg {
+    width: 18px;
+    height: 18px;
+}
+
+.service-modal-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--deep-brown);
+    margin: 0;
+}
+
+.service-modal-body {
+    flex: 1;
+    padding: 0 24px 24px;
+    overflow-y: auto;
+}
+
+.service-modal-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+    background: linear-gradient(135deg, var(--nude-beige), var(--soft-cappuccino));
+}
+
+.service-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-modal-description {
+    margin-bottom: 20px;
+}
+
+.service-desc-toggle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--glass-border);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--deep-brown);
+    cursor: pointer;
+}
+
+.service-desc-toggle svg {
+    width: 18px;
+    height: 18px;
+    color: var(--soft-cappuccino);
+    transition: transform 0.3s ease;
+}
+
+.service-desc-toggle.open svg {
+    transform: rotate(180deg);
+}
+
+.service-desc-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.service-desc-content.open {
+    max-height: 300px;
+    padding: 16px 0;
+}
+
+.service-desc-content p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--deep-brown);
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* ===== ПРАЙС-ЛИСТ В МОДАЛКЕ ===== */
+
+.service-pricelist {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.price-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(244,234,234,0.5) 100%);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.price-item:hover {
+    border-color: var(--champagne-gold);
+    box-shadow: 0 4px 16px rgba(200,169,126,0.15);
+    transform: translateX(4px);
+}
+
+.price-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.price-item-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--deep-brown);
+}
+
+.price-item-detail {
+    font-size: 0.75rem;
+    color: var(--soft-cappuccino);
+}
+
+.price-item-cost {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--deep-brown);
+    white-space: nowrap;
+}
+
+.service-modal-footer {
+    padding: 16px 24px 32px;
+    border-top: 1px solid var(--glass-border);
+    background: var(--warm-white);
+}
+
+.service-modal-footer .btn-primary {
+    width: 100%;
+    text-align: center;
+}
+
+/* Адаптация прайса */
+@media (min-width: 768px) {
+    .service-modal {
+        align-items: center;
+    }
+    .service-modal-content {
+        border-radius: 32px;
+        max-height: 90vh;
+        transform: translateY(20px) scale(0.95);
+    }
+    .service-modal.active .service-modal-content {
+        transform: translateY(0) scale(1);
+    }
+}
