@@ -334,18 +334,36 @@
             </div>
             <div class="form-group">
                 <label class="form-label">Процедура</label>
-                <select class="form-input" id="bookingProcedure" required>
-                    <option value="">Выберите процедуру</option>
-                    <option>Увеличение губ</option>
-                    <option>Ботокс</option>
-                    <option>RF-лифтинг Vivace</option>
-                    <option>Мезотерапия</option>
-                    <option>Биоревитализация</option>
-                    <option>Контурная пластика</option>
-                    <option>SMAS-лифтинг</option>
-                    <option>Чистка лица</option>
-                    <option>Консультация</option>
-                </select>
+                <div class="custom-select" id="bookingProcedureWrapper">
+                    <div class="custom-select-trigger">
+                        <span>Выберите процедуру</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="custom-options">
+                        <div class="custom-option" data-value="">Выберите процедуру</div>
+                        <div class="custom-option" data-value="Увеличение губ">Увеличение губ</div>
+                        <div class="custom-option" data-value="Ботокс">Ботокс</div>
+                        <div class="custom-option" data-value="RF-лифтинг Vivace">RF-лифтинг Vivace</div>
+                        <div class="custom-option" data-value="Мезотерапия">Мезотерапия</div>
+                        <div class="custom-option" data-value="Биоревитализация">Биоревитализация</div>
+                        <div class="custom-option" data-value="Контурная пластика">Контурная пластика</div>
+                        <div class="custom-option" data-value="SMAS-лифтинг">SMAS-лифтинг</div>
+                        <div class="custom-option" data-value="Чистка лица">Чистка лица</div>
+                        <div class="custom-option" data-value="Консультация">Консультация</div>
+                    </div>
+                    <select class="form-input" id="bookingProcedure" required style="display:none;">
+                        <option value="">Выберите процедуру</option>
+                        <option>Увеличение губ</option>
+                        <option>Ботокс</option>
+                        <option>RF-лифтинг Vivace</option>
+                        <option>Мезотерапия</option>
+                        <option>Биоревитализация</option>
+                        <option>Контурная пластика</option>
+                        <option>SMAS-лифтинг</option>
+                        <option>Чистка лица</option>
+                        <option>Консультация</option>
+                    </select>
+                </div>
             </div>
             <div class="form-group">
                 <label class="form-label">Удобная дата</label>

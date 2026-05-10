@@ -1090,6 +1090,78 @@ select.form-input {
     background-position: right 16px center;
     background-size: 16px;
 }
+
+/* Custom Select */
+.custom-select {
+    position: relative;
+    width: 100%;
+}
+.custom-select-trigger {
+    width: 100%;
+    padding: 16px 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(200,169,126,0.3);
+    border-radius: 16px;
+    color: var(--warm-white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.custom-select-trigger:hover,
+.custom-select.open .custom-select-trigger {
+    border-color: var(--champagne-gold);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 0 4px rgba(200,169,126,0.1);
+}
+.custom-select-trigger svg {
+    width: 16px;
+    height: 16px;
+    color: var(--soft-cappuccino);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+.custom-select.open .custom-select-trigger svg {
+    transform: rotate(180deg);
+}
+.custom-options {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #F4EAEA 0%, #E8DCCF 100%);
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(59,46,42,0.15);
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    padding: 8px;
+}
+.custom-select.open .custom-options {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+.custom-option {
+    padding: 12px 16px;
+    border-radius: 12px;
+    color: var(--deep-brown);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.custom-option:hover,
+.custom-option.selected {
+    background: var(--dusty-rose);
+    color: var(--warm-white);
+}
 .booking-buttons {
     display: flex;
     flex-direction: column;

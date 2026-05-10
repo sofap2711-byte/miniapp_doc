@@ -287,3 +287,54 @@ if (successModal) {
         if (e.target === successModal) closeModal();
     });
 }
+
+// ===== КАСТОМНЫЙ SELECT =====
+const customSelectWrapper = document.getElementById('bookingProcedureWrapper');
+if (customSelectWrapper) {
+    const customTrigger = customSelectWrapper.querySelector('.custom-select-trigger');
+    const customTriggerText = customTrigger.querySelector('span');
+    const customOptions = customSelectWrapper.querySelectorAll('.custom-option');
+    const realSelect = document.getElementById('bookingProcedure');
+
+    customTrigger.addEventListener('click', () => {
+        customSelectWrapper.classList.toggle('open');
+    });
+
+    customOptions.forEach(option => {
+        option.addEventListener('click', () => {
+            const value = option.dataset.value;
+            if (realSelect) realSelect.value = value;
+            customTriggerText.textContent = option.textContent;
+            customOptions.forEach(o => o.classList.remove('selected'));
+            option.classList.add('selected');
+            customSelectWrapper.classList.remove('open');
+        });
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!customSelectWrapper.contains(e.target)) {
+            customSelectWrapper.classList.remove('open');
+        }
+    });
+
+    // Синхронизация при изменении оригинального select из других частей кода
+    if (realSelect) {
+        realSelect.addEventListener('change', () => {
+            const selectedOption = realSelect.options[realSelect.selectedIndex];
+            if (selectedOption) {
+                customTriggerText.textContent = selectedOption.text;
+                customOptions.forEach(o => {
+                    o.classList.toggle('selected', o.dataset.value === realSelect.value);
+                });
+            }
+        });
+    }
+
+    // Сброс текста при очистке формы
+    if (bookingForm) {
+        bookingForm.addEventListener('reset', () => {
+            customTriggerText.textContent = 'Выберите процедуру';
+            customOptions.forEach(o => o.classList.remove('selected'));
+        });
+    }
+}
