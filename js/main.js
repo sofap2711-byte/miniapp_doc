@@ -1,6 +1,5 @@
 // Particles
 const particlesContainer = document.getElementById('particles');
-<<<<<<< HEAD
 if (particlesContainer) {
     for (let i = 0; i < 15; i++) {
         const p = document.createElement('div');
@@ -14,19 +13,6 @@ if (particlesContainer) {
         p.style.animationDuration = (Math.random() * 4 + 4) + 's';
         particlesContainer.appendChild(p);
     }
-=======
-for (let i = 0; i < 15; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    const size = Math.random() * 100 + 50;
-    p.style.width = size + 'px';
-    p.style.height = size + 'px';
-    p.style.left = Math.random() * 100 + '%';
-    p.style.top = Math.random() * 100 + '%';
-    p.style.animationDelay = Math.random() * 6 + 's';
-    p.style.animationDuration = (Math.random() * 4 + 4) + 's';
-    particlesContainer.appendChild(p);
->>>>>>> ae5a0d520b0e7d1ca341e602ec19087a29c56486
 }
 
 // Scroll animations
@@ -43,17 +29,12 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-<<<<<<< HEAD
 document.querySelectorAll('.service-category, .feature-card, .review-card, .about-card, .section-header').forEach(el => {
-=======
-document.querySelectorAll('.service-card, .feature-card, .review-card, .about-card, .section-header').forEach(el => {
->>>>>>> ae5a0d520b0e7d1ca341e602ec19087a29c56486
     observer.observe(el);
 });
 
 // Sticky CTA
 const stickyCta = document.getElementById('stickyCta');
-<<<<<<< HEAD
 if (stickyCta) {
     let lastScroll = 0;
     window.addEventListener('scroll', () => {
@@ -66,24 +47,11 @@ if (stickyCta) {
         lastScroll = currentScroll;
     });
 }
-=======
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    if (currentScroll > 600 && currentScroll > lastScroll) {
-        stickyCta.classList.add('visible');
-    } else if (currentScroll < 300 || currentScroll < lastScroll) {
-        stickyCta.classList.remove('visible');
-    }
-    lastScroll = currentScroll;
-});
->>>>>>> ae5a0d520b0e7d1ca341e602ec19087a29c56486
 
 // Before/After Slider
 const baContainer = document.getElementById('baContainer');
 const baHandle = document.getElementById('baHandle');
 const baAfter = document.getElementById('baAfter');
-<<<<<<< HEAD
 
 if (baContainer && baHandle) {
     let isDragging = false;
@@ -213,7 +181,6 @@ const serviceModalClose = document.getElementById('serviceModalClose');
 
 let currentService = null;
 
-// Открытие модалки
 function openServiceModal(category) {
     const data = servicesData[category];
     if (!data) return;
@@ -225,7 +192,6 @@ function openServiceModal(category) {
     serviceModalImage.alt = data.title;
     serviceModalDesc.textContent = data.description;
 
-    // Генерация прайса
     servicePricelist.innerHTML = data.prices.map(item => `
         <div class="price-item" data-procedure="${item.name}">
             <div class="price-item-info">
@@ -236,7 +202,6 @@ function openServiceModal(category) {
         </div>
     `).join('');
 
-    // Клик по позиции прайса — подставляет в форму
     servicePricelist.querySelectorAll('.price-item').forEach(item => {
         item.addEventListener('click', () => {
             const procedure = item.dataset.procedure;
@@ -249,7 +214,6 @@ function openServiceModal(category) {
         });
     });
 
-    // Сброс описания
     serviceDescContent.classList.remove('open');
     serviceDescToggle.classList.remove('open');
 
@@ -262,7 +226,6 @@ function closeServiceModal() {
     document.body.style.overflow = '';
 }
 
-// Клик по категории
 if (serviceModal) {
     document.querySelectorAll('.service-category').forEach(cat => {
         cat.addEventListener('click', () => {
@@ -271,11 +234,9 @@ if (serviceModal) {
         });
     });
 
-    // Закрытие
     serviceModalClose.addEventListener('click', closeServiceModal);
     serviceModal.querySelector('.service-modal-overlay').addEventListener('click', closeServiceModal);
 
-    // Свайп вниз для закрытия (мобильные)
     let touchStartY = 0;
     const modalContent = serviceModal.querySelector('.service-modal-content');
 
@@ -291,7 +252,6 @@ if (serviceModal) {
     });
 }
 
-// Аккордеон описания
 if (serviceDescToggle && serviceDescContent) {
     serviceDescToggle.addEventListener('click', () => {
         serviceDescContent.classList.toggle('open');
@@ -327,44 +287,3 @@ if (successModal) {
         if (e.target === successModal) closeModal();
     });
 }
-=======
-let isDragging = false;
-
-function updateSlider(x) {
-    const rect = baContainer.getBoundingClientRect();
-    let percent = ((x - rect.left) / rect.width) * 100;
-    percent = Math.max(5, Math.min(95, percent));
-    baHandle.style.left = percent + '%';
-    baAfter.style.width = percent + '%';
-}
-
-baHandle.addEventListener('mousedown', () => isDragging = true);
-baHandle.addEventListener('touchstart', () => isDragging = true);
-window.addEventListener('mouseup', () => isDragging = false);
-window.addEventListener('touchend', () => isDragging = false);
-window.addEventListener('mousemove', (e) => isDragging && updateSlider(e.clientX));
-window.addEventListener('touchmove', (e) => isDragging && updateSlider(e.touches[0].clientX));
-baContainer.addEventListener('click', (e) => updateSlider(e.clientX));
-
-// Form handling
-const bookingForm = document.getElementById('bookingForm');
-const successModal = document.getElementById('successModal');
-
-bookingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    successModal.classList.add('active');
-    bookingForm.reset();
-});
-
-function closeModal() {
-    successModal.classList.remove('active');
-}
-
-document.getElementById('consultBtn').addEventListener('click', () => {
-    successModal.classList.add('active');
-});
-
-successModal.addEventListener('click', (e) => {
-    if (e.target === successModal) closeModal();
-});
->>>>>>> ae5a0d520b0e7d1ca341e602ec19087a29c56486
