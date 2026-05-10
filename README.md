@@ -18,4 +18,4 @@
 
 ## Запуск
 
-Открой `index.html` в браузере или используй Live Server в VS Code.
+Открой `index.html` в браузере или используй Live Server в VS Code.# miniapp_doc
