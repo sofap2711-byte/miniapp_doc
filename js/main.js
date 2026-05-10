@@ -335,9 +335,9 @@ function closeModal() {
 }
 
 const consultBtn = document.getElementById('consultBtn');
-if (consultBtn && successModal) {
+if (consultBtn) {
     consultBtn.addEventListener('click', () => {
-        successModal.classList.add('active');
+        window.open('https://t.me/sofi_sofi_27', '_blank');
     });
 }
 
