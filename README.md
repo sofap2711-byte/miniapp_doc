@@ -1,4 +1,4 @@
-# Dr. Volkova Aesthetics
+# Dr. Name Aesthetics
 
 Премиальный сайт-визитка для врача-косметолога.
 
