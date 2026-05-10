@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dr. Elena Volkova — Врач-косметолог</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-logo">Dr. Volkova <span>Aesthetics</span></div>
+        <div class="nav-menu">
+            <a href="#about" class="nav-link">О враче</a>
+            <a href="#services" class="nav-link">Услуги</a>
+            <a href="#results" class="nav-link">Результаты</a>
+            <a href="#booking" class="nav-cta">Записаться</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-particles" id="particles"></div>
+        <div class="hero-badge">
+            <span class="star">★</span>
+            <span>5.0 рейтинг — 200+ отзывов</span>
+        </div>
+        <h1>Dr. Elena<br>Volkova</h1>
+        <p class="hero-subtitle">Врач-косметолог дерматолог</p>
+        <p class="hero-desc">
+            Естественная красота без перегруженности.<br>
+            Современная косметология с деликатным подходом.
+        </p>
+        <div class="hero-cta-group">
+            <a href="#booking" class="btn-primary">Записаться</a>
+            <a href="#consultation" class="btn-secondary">Консультация</a>
+        </div>
+        <div class="hero-scroll">
+            <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-header">
+            <div class="section-label">О враче</div>
+            <h2 class="section-title">Доктор, которому<br>доверяют</h2>
+        </div>
+        <div class="about-card">
+            <div class="about-portrait">
+                <img src="images/doctor/portrait.jpg" alt="Елена Волкова">
+            </div>
+            <div class="about-content">
+                <h3 class="about-name">Елена Волкова</h3>
+                <div class="about-title">Врач-косметолог</div>
+                <p class="about-text">
+                    Моя задача — подчеркнуть естественную красоту и сохранить гармонию лица. 
+                    Я не делаю «маску», я работаю с тем, что есть, усиливая ваши лучшие черты.
+                    <br><br>
+                    Медицинское образование, 8 лет практики, сертификация по всем процедурам. 
+                    Использую только премиальные препараты и современное оборудование.
+                </p>
+                <div class="about-signature">— С заботой о вашей красоте</div>
+            </div>
+            <div class="about-stats">
+                <div class="stat-item">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">Клиентов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8 лет</span>
+                    <span class="stat-label">Практики</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Возвращаются</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="section-header">
+            <div class="section-label">Услуги</div>
+            <h2 class="section-title">Премиальные<br>процедуры</h2>
+            <p class="section-subtitle">Индивидуальный подбор под ваш тип кожи и задачи</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💋</div>
+                <h3 class="service-name">Увеличение губ</h3>
+                <p class="service-desc">Деликатное увеличение губ с сохранением естественной формы и объёма. Натуральный результат без «утиного» эффекта.</p>
+                <div class="service-meta">
+                    <span>⏱ 45 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3 class="service-name">Ботокс</h3>
+                <p class="service-desc">Коррекция мимических морщин лба, межбровья и глаз. Сохраняем естественную мимику, убираем следы усталости.</p>
+                <div class="service-meta">
+                    <span>⏱ 30 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3 class="service-name">RF-лифтинг Vivace</h3>
+                <p class="service-desc">Игольчатый RF-лифтинг нового поколения. Стимуляция коллагена без длительной реабилитации.</p>
+                <div class="service-meta">
+                    <span>⏱ 60 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💧</div>
+                <h3 class="service-name">Мезотерапия</h3>
+                <p class="service-desc">Витаминные коктейли для увлажнения, питания и омоложения кожи. Индивидуальные смеси под ваши задачи.</p>
+                <div class="service-meta">
+                    <span>⏱ 40 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌸</div>
+                <h3 class="service-name">Биоревитализация</h3>
+                <p class="service-desc">Глубокое увлажнение и восстановление на клеточном уровне. Гладкая и сияющая кожа без макияжа.</p>
+                <div class="service-meta">
+                    <span>⏱ 50 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3 class="service-name">Контурная пластика</h3>
+                <p class="service-desc">Коррекция скул, подбородка, носослезной борозды. Восстановление утраченных объёмов лица.</p>
+                <div class="service-meta">
+                    <span>⏱ 45 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔮</div>
+                <h3 class="service-name">SMAS-лифтинг</h3>
+                <p class="service-desc">Ультразвуковой лифтинг для подтяжки овала лица и шеи. Альтернатива хирургической подтяжке.</p>
+                <div class="service-meta">
+                    <span>⏱ 90 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧖‍♀️</div>
+                <h3 class="service-name">Чистка лица</h3>
+                <p class="service-desc">Атравматичная чистка с ультразвуком и кислотами. Чистые поры без покраснений и следов.</p>
+                <div class="service-meta">
+                    <span>⏱ 75 минут</span>
+                    <a href="#booking" class="service-btn">Подробнее →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="before-after" id="results">
+        <div class="section-header">
+            <div class="section-label">Результаты</div>
+            <h2 class="section-title">До и после</h2>
+            <p class="section-subtitle">Натуральный эффект и деликатная коррекция</p>
+        </div>
+        <div class="ba-slider">
+            <div class="ba-container" id="baContainer">
+                <div class="ba-image ba-image-before">
+                    <img src="images/before-after/before.jpg" alt="До процедуры">
+                </div>
+                <div class="ba-image ba-image-after" id="baAfter">
+                    <img src="images/before-after/after.jpg" alt="После процедуры">
+                </div>
+                <div class="ba-label before">До</div>
+                <div class="ba-label after">После</div>
+                <div class="ba-handle" id="baHandle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <p class="ba-hint">Потяните ползунок, чтобы сравнить результат</p>
+    </section>
+
+    <section class="why-us">
+        <div class="section-header">
+            <div class="section-label">Почему мы</div>
+            <h2 class="section-title">Доверие и<br>безопасность</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🏥</div>
+                <h3 class="feature-title">Медицинский подход</h3>
+                <p class="feature-desc">Только доказательная косметология и безопасные протоколы</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3 class="feature-title">Сертифицированные препараты</h3>
+                <p class="feature-desc">Оригинальная продукция с официальными сертификатами</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3 class="feature-title">Современное оборудование</h3>
+                <p class="feature-desc">FDA-approved аппараты последнего поколения</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3 class="feature-title">Индивидуальный подход</h3>
+                <p class="feature-desc">Персональные протоколы под ваш тип кожи и задачи</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌿</div>
+                <h3 class="feature-title">Натуральный результат</h3>
+                <p class="feature-desc">Вы будете выглядеть свежее, но всё ещё как вы</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3 class="feature-title">Стерильность</h3>
+                <p class="feature-desc">Одноразовые материалы и строгая дезинфекция</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vivace">
+        <div class="vivace-content">
+            <div class="section-header">
+                <div class="section-label">Технология</div>
+                <h2 class="section-title">Vivace RF Lifting</h2>
+                <p class="section-subtitle">Игольчатый RF-лифтинг нового поколения</p>
+            </div>
+            <div class="vivace-device">
+                <div class="vivace-device-inner">⚡</div>
+            </div>
+            <p class="vivace-text">
+                Стимуляция коллагена без длительной реабилитации. 
+                Микроиглы с RF-энергией запускают процесс омоложения изнутри.
+            </p>
+            <div class="vivace-benefits">
+                <div class="vivace-benefit">
+                    <div class="vivace-benefit-icon">⬆️</div>
+                    <div class="vivace-benefit-text">Лифтинг</div>
+                </div>
+                <div class="vivace-benefit">
+                    <div class="vivace-benefit-icon">✨</div>
+                    <div class="vivace-benefit-text">Текстура кожи</div>
+                </div>
+                <div class="vivace-benefit">
+                    <div class="vivace-benefit-icon">🔍</div>
+                    <div class="vivace-benefit-text">Сужение пор</div>
+                </div>
+                <div class="vivace-benefit">
+                    <div class="vivace-benefit-icon">🌟</div>
+                    <div class="vivace-benefit-text">Омоложение</div>
+                </div>
+            </div>
+            <div class="vivace-cta">
+                <a href="#booking" class="btn-primary">Записаться на Vivace</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="section-header">
+            <div class="section-label">Отзывы</div>
+            <h2 class="section-title">Что говорят<br>клиенты</h2>
+        </div>
+        <div class="reviews-carousel">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <img src="images/reviews/anna.jpg" alt="Анна К.">
+                    </div>
+                    <div class="review-meta">
+                        <h4>Анна К.</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">«Очень естественный результат. Никто не заметил, что я что-то сделала, но все говорят, что выгляжу отдохнувшей и свежее.»</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <img src="images/reviews/maria.jpg" alt="Мария Д.">
+                    </div>
+                    <div class="review-meta">
+                        <h4>Мария Д.</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">«Лучший косметолог, к которому я ходила. Деликатный подход, внимание к деталям и потрясающий результат.»</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <img src="images/reviews/kate.jpg" alt="Екатерина С.">
+                    </div>
+                    <div class="review-meta">
+                        <h4>Екатерина С.</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">«Губы выглядят идеально и натурально. Наконец-то нашла врача, который понимает, что такое «естественная красота».»</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">
+                        <img src="images/reviews/olga.jpg" alt="Ольга Р.">
+                    </div>
+                    <div class="review-meta">
+                        <h4>Ольга Р.</h4>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">«Vivace изменил мою кожу. Поры сузились, текстура выровнялась, а лифтинг-эффект заметен уже после первой процедуры.»</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="instagram">
+        <div class="section-header">
+            <div class="section-label">Instagram</div>
+            <h2 class="section-title">Работы и жизнь<br>клиники</h2>
+        </div>
+        <div class="insta-grid">
+            <div class="insta-item reel">
+                <img src="images/instagram/photo1.jpg" alt="Работа">
+            </div>
+            <div class="insta-item">
+                <img src="images/instagram/photo2.jpg" alt="Работа">
+            </div>
+            <div class="insta-item reel">
+                <img src="images/instagram/photo3.jpg" alt="Работа">
+            </div>
+            <div class="insta-item">
+                <img src="images/instagram/photo4.jpg" alt="Работа">
+            </div>
+            <div class="insta-item">
+                <img src="images/instagram/photo5.jpg" alt="Работа">
+            </div>
+            <div class="insta-item reel">
+                <img src="images/instagram/photo6.jpg" alt="Работа">
+            </div>
+        </div>
+        <div class="insta-cta">
+            <a href="https://instagram.com" target="_blank" class="btn-secondary">Смотреть Instagram</a>
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <div class="section-header">
+            <div class="section-label">Запись</div>
+            <h2 class="section-title">Запишитесь<br>на приём</h2>
+            <p class="section-subtitle">Оставьте заявку, и мы свяжемся с вами в течение 15 минут</p>
+        </div>
+        <form class="booking-form" id="bookingForm">
+            <div class="form-group">
+                <label class="form-label">Ваше имя</label>
+                <input type="text" class="form-input" placeholder="Елена" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Телефон</label>
+                <input type="tel" class="form-input" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Процедура</label>
+                <select class="form-input" required>
+                    <option value="">Выберите процедуру</option>
+                    <option>Увеличение губ</option>
+                    <option>Ботокс</option>
+                    <option>RF-лифтинг Vivace</option>
+                    <option>Мезотерапия</option>
+                    <option>Биоревитализация</option>
+                    <option>Контурная пластика</option>
+                    <option>SMAS-лифтинг</option>
+                    <option>Чистка лица</option>
+                    <option>Консультация</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Удобная дата</label>
+                <input type="date" class="form-input" required>
+            </div>
+            <div class="booking-buttons">
+                <button type="submit" class="btn-primary">Записаться</button>
+                <button type="button" class="btn-secondary" id="consultBtn">Получить консультацию</button>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">Dr. Volkova Aesthetics</div>
+        <div class="footer-info">
+            Москва, ул. Примерная, 15<br>
+            Ежедневно 10:00 — 21:00<br>
+            +7 (999) 123-45-67
+        </div>
+        <div class="footer-social">
+            <a href="https://instagram.com" target="_blank">📷</a>
+            <a href="https://t.me/drvolkova" target="_blank">✈️</a>
+            <a href="https://wa.me/79991234567" target="_blank">💬</a>
+        </div>
+        <div class="footer-copy">
+            © 2026 Dr. Volkova Aesthetics<br>
+            Политика конфиденциальности
+        </div>
+    </footer>
+
+    <div class="float-buttons">
+        <a href="https://t.me/drvolkova" class="float-btn tg" data-label="Telegram" target="_blank">✈️</a>
+        <a href="https://wa.me/79991234567" class="float-btn wa" data-label="WhatsApp" target="_blank">💬</a>
+    </div>
+
+    <div class="sticky-cta" id="stickyCta">
+        <a href="tel:+79991234567" class="btn-secondary">Позвонить</a>
+        <a href="#booking" class="btn-primary">Записаться</a>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <div class="modal-icon">✨</div>
+            <h3 class="modal-title">Заявка отправлена</h3>
+            <p class="modal-text">
+                Спасибо! Мы свяжемся с вами в течение 15 минут для подтверждения записи.
+            </p>
+            <button class="btn-primary" onclick="closeModal()" style="width: 100%;">Отлично</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
